@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Business_Situation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35d4bc12-8e17-46b4-84d7-2ab91dd7721b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JasperReports_Server\reports\communication\MySQLdatabaseadapter.jrdax"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFAF0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFEABF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#FFFDFB"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Dataset1" uuid="b4e74d3a-613c-4c5e-af24-3647bcff78b4">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JasperReports_Server\reports\communication\MySQLdatabaseadapter.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM `profit_data`]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="profit_data"/>
+		</field>
+		<field name="sid" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="sid"/>
+			<property name="com.jaspersoft.studio.field.label" value="sid"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="profit_data"/>
+		</field>
+		<field name="pname" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="pname"/>
+			<property name="com.jaspersoft.studio.field.label" value="pname"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="profit_data"/>
+		</field>
+		<field name="bname" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="bname"/>
+			<property name="com.jaspersoft.studio.field.label" value="bname"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="profit_data"/>
+		</field>
+		<field name="stock_val" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.name" value="stock_val"/>
+			<property name="com.jaspersoft.studio.field.label" value="stock_val"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="profit_data"/>
+		</field>
+		<field name="income" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.name" value="income"/>
+			<property name="com.jaspersoft.studio.field.label" value="income"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="profit_data"/>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `profit`]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profit"/>
+	</field>
+	<field name="stock_balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="stock_balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="stock_balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profit"/>
+	</field>
+	<field name="today_income" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="today_income"/>
+		<property name="com.jaspersoft.studio.field.label" value="today_income"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profit"/>
+	</field>
+	<field name="month_income" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="month_income"/>
+		<property name="com.jaspersoft.studio.field.label" value="month_income"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profit"/>
+	</field>
+	<field name="total_income" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="total_income"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_income"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profit"/>
+	</field>
+	<group name="stock_balance">
+		<groupExpression><![CDATA[$F{stock_balance}]]></groupExpression>
+	</group>
+	<group name="today_income">
+		<groupExpression><![CDATA[$F{today_income}]]></groupExpression>
+	</group>
+	<group name="month_income">
+		<groupExpression><![CDATA[$F{month_income}]]></groupExpression>
+	</group>
+	<group name="total_income">
+		<groupExpression><![CDATA[$F{total_income}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="1" width="256" height="25" uuid="e0719e13-1a45-4a83-a916-6ee98c74342f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vision Communication & Bookshop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="26" width="172" height="15" uuid="cac26ce4-5a0c-4907-b8c0-83470ed8e90c"/>
+				<text><![CDATA[41/A,Dibbadda Road,Thalpitiya North,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="406" y="53" width="150" height="20" uuid="922695c0-7742-409f-97c5-c75b57431683"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date();]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="43" width="52" height="15" uuid="20dc2362-d893-449c-8cc5-4835c3da305b"/>
+				<text><![CDATA[Wadduwa.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="58" width="62" height="15" uuid="07694fb9-e079-4677-9998-1da0de11dce2"/>
+				<text><![CDATA[071-xxxxxxx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="32" width="50" height="20" uuid="54d9f74d-7277-43a6-a637-e27cc3605d34"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="80" width="556" height="1" uuid="70b7ea1e-8163-470b-8a43-697721d5b8c1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<image>
+				<reportElement x="4" y="4" width="115" height="73" uuid="cfafa1a7-79f7-4936-a1ef-3c39d79e3a96"/>
+				<imageExpression><![CDATA["resources/vision-logo-large.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="111" splitType="Stretch">
+			<textField>
+				<reportElement x="417" y="50" width="126" height="23" uuid="ac00d817-920d-4338-91a9-6a5a650bc515"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": Rs. "+$F{total_income}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="337" y="51" width="80" height="20" uuid="86a49cab-5368-4b4e-8536-4512ce023603"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="51" width="80" height="20" uuid="f2cc168f-ac57-42c6-b431-fc6fdc36bdc5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Stock Value]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="50" width="126" height="23" uuid="e6611c8d-e35b-46af-893a-76bb7733f711"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": Rs. "+$F{stock_balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="81" width="126" height="23" uuid="86af051c-bddc-4122-a25e-a622eff2e6a5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": Rs. "+$F{month_income}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="337" y="82" width="80" height="20" uuid="50562300-3e68-4a7e-97c9-619377aaefcc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Month Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="82" width="80" height="20" uuid="9e5cec34-add7-478e-93b4-96e0b50c8ccc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Today Income]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="81" width="126" height="23" uuid="dd5c1936-609d-4329-82cf-c8caf7e94bca"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": Rs. "+$F{today_income}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="11" width="556" height="25" uuid="93d05374-4924-4a6e-a194-e7b29dd69ae3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[My Business Report]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="223" splitType="Stretch">
+			<componentElement>
+				<reportElement x="33" y="10" width="490" height="200" uuid="6c1baa35-b563-4cbe-a658-570ab2e70728">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="80adb6e2-4800-4451-9e77-cb7e8f046a4e">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="33" uuid="dbd90ece-f3d7-4ddb-a5b2-ce4b9d90f9e3">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="33" height="30" uuid="41181812-40b8-4f2a-a632-dd5e12148108"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="33" height="20" uuid="c27bbc5a-f783-438a-bef1-654ccb059f2d"/>
+								<textElement textAlignment="Center" verticalAlignment="Bottom">
+									<font size="10.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="67" uuid="4531a7a3-ed45-4b34-84c4-7674bc7d4196">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30" uuid="bf1ded90-043b-4197-b3b5-940d71d092a7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
+								</textElement>
+								<text><![CDATA[Stock Id]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="67" height="20" uuid="6a2af324-5390-4f20-91c6-201f6c78db9e"/>
+								<textElement textAlignment="Center" verticalAlignment="Bottom">
+									<font size="10.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{sid}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="390f47a6-525a-46fe-9153-c5d6f28ee287">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="130" height="30" uuid="019119ce-36cd-4d48-8ba4-65e58dc1174c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
+								</textElement>
+								<text><![CDATA[Product Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="20" uuid="257f8510-0a0e-4066-a489-147c2cea2ab3"/>
+								<textElement textAlignment="Center" verticalAlignment="Bottom">
+									<font size="10.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="cbcc1b59-3137-4cfc-a2b0-71f7744346ed">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="6289c331-6cb6-4404-aeb4-fb3e8c82649b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
+								</textElement>
+								<text><![CDATA[Brand]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="046cd860-c6ac-43b8-b6a9-03ad2900a428"/>
+								<textElement textAlignment="Center" verticalAlignment="Bottom">
+									<font size="10.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d32e2bd2-28ef-4d7c-b2a7-d24183463506">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="fcfad522-723c-4b33-ab32-11773da670e2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
+								</textElement>
+								<text><![CDATA[Stock Value]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="f281e4e6-6938-4e72-b69e-f1a2d0cb5cb8"/>
+								<textElement textAlignment="Center" verticalAlignment="Bottom">
+									<font size="10.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{stock_val}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="1801e753-02a3-4279-8426-0c3db2cd6c1f">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="8077305e-59f7-4eb9-aafc-da0d0ecc5047"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
+								</textElement>
+								<text><![CDATA[Income]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="20" uuid="973c6530-3534-4bd8-8621-6d92d37b7a36"/>
+								<textElement textAlignment="Center" verticalAlignment="Bottom">
+									<font size="10.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{income}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="309" y="6" width="245" height="15" uuid="f30a098c-52c3-4a61-887b-88e8426480fe"/>
+				<text><![CDATA[System Design and Developed by : imeshperera.com]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="7" width="100" height="15" uuid="c82c3728-23be-4d8b-ae4e-c6fb58146380"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="1" y="12" width="552" height="101" uuid="41459aed-99d2-41c1-a654-b67a839a63e6"/>
+				<box>
+					<topPen lineWidth="1.1" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.1" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.1" lineStyle="Dashed"/>
+					<rightPen lineWidth="1.1" lineStyle="Dashed"/>
+				</box>
+				<text><![CDATA[Special Notes]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

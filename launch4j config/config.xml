@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\imesh\Documents\NetBeansProjects\My Communication Manager\dist\My_Communication_Manager.jar</jar>
+  <outfile>C:\Users\imesh\Documents\NetBeansProjects\My Communication Manager\dist\Bookshop Manager.exe</outfile>
+  <errTitle>Download Java Resources</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl>www.imeshperera.com</supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\imesh\Documents\NetBeansProjects\My Communication Manager\src\resources\vision-logo.ico</icon>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1.0.0.0</txtFileVersion>
+    <fileDescription>Vision Commmunication &amp; Bookshop Management Tool</fileDescription>
+    <copyright>www.imeshperera.com</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>1.0.0.0</txtProductVersion>
+    <productName>Vision Commmunication &amp; Bookshop Management Tool</productName>
+    <companyName>Vision Commmunication &amp; Bookshop</companyName>
+    <internalName>Vision Commmunication &amp; Bookshop</internalName>
+    <originalFilename>Bookshop Manager.exe</originalFilename>
+    <trademarks>www.imeshperera.com</trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
