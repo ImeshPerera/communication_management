@@ -19,7 +19,6 @@ https://youtu.be/azvIBgjvXMU
 - Java Swing (GUI)
 - MySQL Database
 - Windows Environment
-- MVC Design Concept
 
 ---
 
